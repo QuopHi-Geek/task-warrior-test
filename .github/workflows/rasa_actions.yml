@@ -59,15 +59,24 @@ jobs:
         run: task 5 modify priority:H Do ASAP   
 
          # Scenario 6: Delete a task
-      #- name: Delete a task
-      #  run: |
-      #    task delete 4
-      #    echo yes
+      - name: Delete a task
+        run: |
+          task delete 4
+      - name: Confirm file deletion
+        run: echo yes 
     
          # Scenario 7: Sync tasks
       #- name: Show Taskwarrior sync tasks
       #   run: task sync 
         
-          # Scenario 8: Show pending tasks
-      - name: Synchronize tasks
+          # Scenario 8: List tasks
+      - name: List tasks
         run: task list
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install pytest
+        run: pip install pytest
+      - name: Run pytest
+        run: pytest
