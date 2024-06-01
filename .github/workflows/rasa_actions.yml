@@ -33,6 +33,8 @@ jobs:
         
       - name: Commit changes
         run: |
+          git config --global user.email "tettehwisdom.itil@gmail.com"
+          git config --global user.name "Wisdom Tetteh"
           git add .
           git commit -m "Taskwarrior: Adds new tasks"
       - name: Push changes
