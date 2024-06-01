@@ -24,3 +24,9 @@ Scenario 7: Synchronize tests <br>
 Scenario 8: Generate reports per periods <br>
 Scenario 9: Show all tasks due within a period (ie days , weeks ) <br>
 Scenario 10: Send a reminder notification for tasks that are overdue/pending. <br>
+
+
+<h3>Future Improvements</h3>
+Scenario 1:  Apply hooks to trigger actions <br>
+Scenario 2:  Create recurring tasks <br>
+Scenario 3:  Use custom tags for task or project grouping / suites
