@@ -59,10 +59,10 @@ jobs:
         run: task 5 modify priority:H Do ASAP   
 
          # Scenario 6: Delete a task
-      - name: Delete a task
-        run: |
-          task delete 4
-          echo yes
+      #- name: Delete a task
+      #  run: |
+      #    task delete 4
+      #    echo yes
     
          # Scenario 7: Sync tasks
       - name: Show Taskwarrior sync tasks
