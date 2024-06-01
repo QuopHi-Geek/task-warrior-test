@@ -116,9 +116,48 @@ def test_update_product():
         "products": [{"productId": 5, "quantity": 2}],
     }
 
-    response = requests.put(ENDPOINTS + "/carts/18", data=json.dumps(data))
+    response = requests.put(
+        ENDPOINTS + "/carts/18",
+        data=json.dumps(data),
+        headers={"Content-Type": "application/json"},
+    )
     assert response.status_code == 200
     assert response.ok is True
+    assert len(response.json()) == 4
 
     # assert response body
-    print(response.json)
+    response_body = response.json()
+    assert response_body["date"] is not None
+    assert response_body["products"] is not None
+
+
+def test_update_only_product_details():
+    data = {
+        "userId": 3,
+        "products": [{"productId": 12, "quantity": 7}],
+    }
+
+    response = requests.patch(
+        ENDPOINTS + "/carts/18",
+        data=json.dumps(data),
+        headers={"Content-Type": "application/json"},
+    )
+    assert response.status_code == 200
+    assert response.ok is True
+    assert len(response.json()) == 3
+
+    # assert response body
+    response_body = response.json()
+    assert response_body["products"] is not None
+
+
+def test_delete_cart():
+    response = requests.delete(ENDPOINTS +"/carts/6")
+    assert response.status_code == 200
+    assert response.ok is True
+    assert len(response.json()) == 5
+
+    # assert response body - fake cart object is returned
+    response_body = response.json()
+    assert response_body["date"] is not None
+    assert response_body["products"] is not None
