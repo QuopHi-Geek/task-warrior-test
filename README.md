@@ -1,5 +1,14 @@
 # rasa-task
 
+<h3>Prerequisites</h3>
+- Python
+- pip
+
+<h3> Installation</h3>
+- Clone the repository - "
+- Install the pip dependencies - "pip install -r requirements.txt" 
+- Use "pytest" to run the tests
+
 <h3>TaskWarrior Scenarios</h3>
 1. Create a new task - Add a new task to a list  <br>
 2. Finish a task - Marks a task as done <br>
@@ -18,13 +27,11 @@ Scenario 4: Show all pending tasks <br>
 Scenario 5: Delete a task <br>
 Scenario 6: Set priority for a task <br>
 
-
 <h4>Possible Automation</h4>
 Scenario 7: Synchronize tests <br>
 Scenario 8: Generate reports per periods <br>
 Scenario 9: Show all tasks due within a period (ie days , weeks ) <br>
 Scenario 10: Send a reminder notification for tasks that are overdue/pending. <br>
-
 
 <h3>Future Improvements</h3>
 1. Apply hooks to trigger actions for CI tasks<br>
