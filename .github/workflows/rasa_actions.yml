@@ -1,4 +1,4 @@
-name: Taskwarrior Automation
+name: TaskWarrior Workflow
 
 on:
   push:
@@ -6,20 +6,30 @@ on:
       - main
 
 jobs:
+  super-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   taskwarrior:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Install Taskwarrior
-        run: sudo apt-get update && sudo apt-get install -y taskwarrior 
-      - name: Run Taskwarrior command
-        run: task sync
-      - name: Create Taskwarrior config
-        run: |
-            echo ~/.taskrc
-            echo yes
+        run: sudo apt-get update && sudo apt-get install -y taskwarrior
+        
+      - name: Create Taskwarrior configuration file
+        run: | 
+             echo ~/.taskrc
+             echo yes
       - name: Run Taskwarrior version
-        run: task version  
+        run: task version 
       - name: Commit changes
         run: |
           git add .
