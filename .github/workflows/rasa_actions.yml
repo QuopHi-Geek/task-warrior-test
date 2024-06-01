@@ -29,13 +29,45 @@ jobs:
       - name: Prompt for creating sample configuration file
         run: echo yes
       - name: Run Taskwarrior version
-        run: task version   
+        run: task version
+  
+        # Scenario 1: Adds tasks to Taskwarrior
+      - name: Add new task commands
+        run: | 
+              task add Create test plan
+              task add Modify payment test cases
+              task add Setup test framework
+              task add "Create test plan" due:tomorrow
+              task add Work on legacy code
+              task add Update test libraries 
+              task add Modify test data for carts
         
-      - name: Commit changes
+          # Scenario 2: Complete a task in Taskwarrior
+      - name: Complete a task
+        run: task 2 'done'
+        
+          # Scenario 3: Show all tasks
+      - name : List all pending tasks
+        run: task list
+        
+          # Scenario 4: Modify a task
+      - name : Modify task
+        run: task 3 modify due:eom
+
+      # Scenario 5: Set priority for a task 
+      - name: Set priority for a task
+        run: task 5 modify priority:H Do ASAP   
+
+         # Scenario 6: Delete a task
+      - name: Delete a task
         run: |
-          git config --global user.email "tettehwisdom.itil@gmail.com"
-          git config --global user.name "Wisdom Tetteh"
-          git add .
-          git commit -m "Taskwarrior: Adds new tasks"
-      - name: Push changes
-        run: git push origin main
+          task delete 4
+          echo yes
+    
+         # Scenario 7: Sync tasks
+      - name: Show Taskwarrior sync tasks
+        run: task sync 
+        
+          # Scenario 8: Show pending tasks
+      - name: Synchronize tasks
+        run: task list
