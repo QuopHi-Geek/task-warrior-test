@@ -1,13 +1,13 @@
 # rasa-task
 
-<h3>Prerequisites</h3>
-- Python
-- pip
+<h3>Pre-requisites</h3>
+- Python <br>
+- pip <br>
 
-<h3> Installation</h3>
-- Clone the repository - "
-- Install the pip dependencies - "pip install -r requirements.txt" 
-- Use "pytest" to run the tests
+<h3>Installation</h3>
+- Clone the repository - "git clone https://github.com/kod/rasa-task.git" <br>
+- Install the pip dependencies and requirements <br>
+- Use "pytest" to run the tests <br>
 
 <h3>TaskWarrior Scenarios</h3>
 1. Create a new task - Add a new task to a list  <br>
