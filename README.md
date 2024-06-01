@@ -27,6 +27,8 @@ Scenario 10: Send a reminder notification for tasks that are overdue/pending. <b
 
 
 <h3>Future Improvements</h3>
-Scenario 1:  Apply hooks to trigger actions <br>
-Scenario 2:  Create recurring tasks <br>
-Scenario 3:  Use custom tags for task or project grouping / suites
+1. Apply hooks to trigger actions for CI tasks<br>
+2. Create recurring tasks CI tasks <br>
+3. Use custom tags for task or project grouping / suites CI tasks <br>
+4. Read from external file for POST request <br>
+5. Add more assertions for headers <br>
