@@ -1,0 +1,22 @@
+name: Taskwarrior Automation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  taskwarrior:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Taskwarrior
+        run: sudo apt-get update && sudo apt-get install -y taskwarrior 
+      - name: Run Taskwarrior command
+        run: task sync
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "Taskwarrior: Adds new tasks"
+      - name: Push changes
+        run: git push origin main
