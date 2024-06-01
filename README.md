@@ -17,3 +17,10 @@ Scenario 3: Modify a task<br>
 Scenario 4: Show all pending tasks <br>
 Scenario 5: Delete a task <br>
 Scenario 6: Set priority for a task <br>
+
+
+<h4>Possible Automation</h4>
+Scenario 7: Synchronize tests
+Scenario 8: Generate reports per periods
+Scenario 9: Show all tasks due within a period (ie days , weeks )
+Scenario 10: Send a reminder notification for tasks that are overdue/pending.
