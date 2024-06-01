@@ -65,8 +65,8 @@ jobs:
       #    echo yes
     
          # Scenario 7: Sync tasks
-      - name: Show Taskwarrior sync tasks
-        run: task sync 
+      #- name: Show Taskwarrior sync tasks
+      #   run: task sync 
         
           # Scenario 8: Show pending tasks
       - name: Synchronize tasks
