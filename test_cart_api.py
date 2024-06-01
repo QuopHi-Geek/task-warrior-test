@@ -1,10 +1,10 @@
 """
 Testing the cart API endpoints task
 
-This module contains unit tests for the various endpoints of the cart API,
-including getting all cart products, getting a single cart item, filtering
-products, sorting products, getting a user's cart, adding a new product,
-updating product details, updating a product, and deleting a cart.
+This module contains tests for the endpoints of the cart API,
+including GET all cart products, GET a single cart item, FILTER
+products, SORT products, GET a user's cart, ADD a new product,
+UPDATE product details, UPDATE a product, and DELETES a cart.
 """
 import json
 
