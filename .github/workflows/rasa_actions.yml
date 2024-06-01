@@ -25,11 +25,12 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y taskwarrior
         
       - name: Create Taskwarrior configuration file
-        run: | 
-             echo ~/.taskrc
-             echo yes
+        run: echo "data.location = ~/.task" >> ~/.taskrc
+      - name: Prompt for creating sample configuration file
+        run: echo yes
       - name: Run Taskwarrior version
-        run: task version 
+        run: task version   
+        
       - name: Commit changes
         run: |
           git add .
