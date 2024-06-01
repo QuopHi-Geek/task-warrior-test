@@ -14,6 +14,12 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y taskwarrior 
       - name: Run Taskwarrior command
         run: task sync
+      - name: Create Taskwarrior config
+        run: echo ~/.taskrc
+      - name: Skip prompt for creating sample configuration file
+        run: echo yes
+      - name: Run Taskwarrior version
+        run: task version  
       - name: Commit changes
         run: |
           git add .
