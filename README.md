@@ -1,4 +1,4 @@
-# rasa-task
+# TaskWarrior
 
 Repo : https://github.com/QuopHi-Geek/rasa-task 
 
@@ -7,7 +7,7 @@ Repo : https://github.com/QuopHi-Geek/rasa-task
 - pip <br>
 
 <h3>Installation</h3>
-- Clone the repository - "git@github.com:QuopHi-Geek/rasa-task.git" <br>
+- Clone the repository <br>
 - Install the pip dependencies and requirements <br>
 - Use "pytest" to run the tests <br>
 
