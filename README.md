@@ -1,6 +1,4 @@
-# TaskWarrior
-
-Repo : https://github.com/QuopHi-Geek/rasa-task 
+# TaskWarrior CI Test
 
 <h3>Pre-requisites</h3>
 - Python <br>
